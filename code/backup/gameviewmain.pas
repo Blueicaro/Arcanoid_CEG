@@ -145,7 +145,7 @@ begin
     end
     else
     begin
-      if BodyPlayer.LinearVelocity.X < 200 then
+      if BodyPlayer.LinearVelocity.X > 200 then
         BodyPlayer.LinearVelocity := Vector3(150, 0, 0)
       else
         BodyPlayer.LinearVelocity := Vector3(300, 0, 0);

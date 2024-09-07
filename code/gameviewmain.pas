@@ -21,8 +21,7 @@ type
     BodyBola: TCastleRigidBody;
     BodyPlayer: TCastleRigidBody;
     procedure PlayerColision(const CollisionDetails: TPhysicsCollisionDetails);
-    procedure PlayerCollisionExit(const CollisionDetails:
-      TPhysicsCollisionDetails);
+    procedure PlayerCollisionExit(const CollisionDetails: TPhysicsCollisionDetails);
   published
     { Components designed using CGE editor.
       These fields will be automatically initialized at Start. }
@@ -69,9 +68,15 @@ begin
   inherited;
   BodyBola := Bola.FindBehavior(TCastleRigidBody) as TCastleRigidBody;
   BodyPlayer := Player.FindBehavior(TCastleRigidBody) as TCastleRigidBody;
+
+  {$IFDEF FPC}
   BodyPlayer.OnCollisionEnter := @PlayerColision;
   BodyPlayer.OnCollisionExit := @PlayerCollisionExit;
-  //  BodyPlayer.OnCollisionStay:=@PlayerColision;
+  {$ELSE}
+  BodyPlayer.OnCollisionEnter := PlayerColision;
+  BodyPlayer.OnCollisionExit := PlayerCollisionExit;
+  {$ENDIF}
+
 end;
 
 procedure TViewMain.Update(const SecondsPassed: single; var HandleInput: boolean);
