@@ -57,6 +57,7 @@
         "$Children" : [
           {
             "$$ClassName" : "TCastleCamera",
+            "CastShadows" : false,
             "CenterPersistent" : {
               "$$ClassName" : "TCastleVector3Persistent"
             },
@@ -401,6 +402,7 @@
           },
           {
             "$$ClassName" : "TCastleBox",
+            "CastShadows" : false,
             "CenterPersistent" : {
               "$$ClassName" : "TCastleVector3Persistent"
             },
@@ -408,6 +410,7 @@
               "$$ClassName" : "TCastleColorPersistent"
             },
             "Name" : "Player",
+            "RenderLayer" : "rlFront",
             "RenderOptions" : {
               "$$ClassName" : "TCastleScene.TSceneRenderOptions",
               "WireframeColorPersistent" : {
@@ -462,6 +465,82 @@
                 "Name" : "BoxCollider1"
               }
             ]
+          },
+          {
+            "$$ClassName" : "TCastleDirectionalLight",
+            "CenterPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "ColorPersistent" : {
+              "$$ClassName" : "TCastleColorRGBPersistent"
+            },
+            "Name" : "DirectionalLight1",
+            "RotationPersistent" : {
+              "$$ClassName" : "TCastleVector4RotationPersistent"
+            },
+            "ScaleOrientationPersistent" : {
+              "$$ClassName" : "TCastleVector4Persistent"
+            },
+            "ScalePersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "TranslationPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            }
+          },
+          {
+            "$$ClassName" : "TCastlePointLight",
+            "AttenuationPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "CenterPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "ColorPersistent" : {
+              "$$ClassName" : "TCastleColorRGBPersistent"
+            },
+            "Intensity" : 1.0000000000000000E+003,
+            "Name" : "PointLight1",
+            "Radius" : 3.6000000000000000E+002,
+            "RotationPersistent" : {
+              "$$ClassName" : "TCastleVector4RotationPersistent"
+            },
+            "ScaleOrientationPersistent" : {
+              "$$ClassName" : "TCastleVector4Persistent"
+            },
+            "ScalePersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "TranslationPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            }
+          },
+          {
+            "$$ClassName" : "TCastlePointLight",
+            "AttenuationPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "CenterPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "ColorPersistent" : {
+              "$$ClassName" : "TCastleColorRGBPersistent"
+            },
+            "Name" : "PointLight2",
+            "RotationPersistent" : {
+              "$$ClassName" : "TCastleVector4RotationPersistent"
+            },
+            "ScaleOrientationPersistent" : {
+              "$$ClassName" : "TCastleVector4Persistent"
+            },
+            "ScalePersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent"
+            },
+            "TranslationPersistent" : {
+              "$$ClassName" : "TCastleVector3Persistent",
+              "X" : 1.3910289764404297E+001,
+              "Y" : -4.4314205932617188E+002
+            }
           }
         ]
       },
@@ -538,7 +617,7 @@
         "Name" : "",
         "Orthographic" : {
           "$$ClassName" : "TCastleOrthographic",
-          "Height" : 1.1606593017578125E+003,
+          "Height" : 1.3711569824218750E+003,
           "OriginPersistent" : {
             "$$ClassName" : "TCastleVector2Persistent",
             "X" : 5.0000000000000000E-001,
